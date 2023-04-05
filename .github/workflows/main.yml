@@ -11,7 +11,7 @@ jobs:
       run: npm i
 
     - name: lint app
-      run: npm lint
+      run: npm run lint
 
     - name: test app
       run: npm test

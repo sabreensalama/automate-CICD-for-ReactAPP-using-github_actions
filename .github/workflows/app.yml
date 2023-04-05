@@ -1,4 +1,4 @@
-name: build react app workflow
+name: react workflow
 on: push
 jobs:
   test-react-job:

@@ -1,0 +1,32 @@
+name: build react app workflow
+on:
+  pull_request:
+    types: [opened]
+    branches:
+    - "main"
+  workflow_dispatch:
+  push:
+    branches:
+    - "main"
+
+
+jobs:
+  test-react-job:
+    runs-on: ubuntu-latest
+    steps:
+    - name: checkout code
+      uses: actions/checkout@v3
+
+    - name: install dependencies
+      working-directory: ./hello-world
+      run: npm i
+
+    - name: build the app
+      run: npm run build
+
+    - name: artifact saving
+      uses: actions/upload-artifact
+      with:
+        name: test-artifact
+        path: dist
+

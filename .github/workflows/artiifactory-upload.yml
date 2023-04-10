@@ -25,7 +25,10 @@ jobs:
 
     - name: test app
       run: npm run test
-
+      
+    - name: build app
+      run: npm run build
+      
     - name: artifact saving
       uses: actions/upload-artifact@v3
       with:

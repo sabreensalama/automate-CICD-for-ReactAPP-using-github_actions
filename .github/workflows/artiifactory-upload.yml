@@ -1,4 +1,4 @@
-name: build react app workflow
+name: artfactory upload
 on:
   pull_request:
     types: [opened]
